@@ -8,6 +8,13 @@
     <title>IT202 Assignment 5</title>
     <script src="script.js"></script>
     <style>
+        div{
+            border-style: solid;
+            border-width: thin;
+            background-color: #f3e2be;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
     </style>
 </head>
 <body>
