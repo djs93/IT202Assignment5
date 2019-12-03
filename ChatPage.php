@@ -8,9 +8,25 @@
     <title>IT202 Assignment 5</title>
     <script src="script.js"></script>
     <style>
-
     </style>
 </head>
 <body>
+<div id="nameBar">
+    <?php
+        $query = "SELECT name FROM IT202A5_Users";
+        $result = mysqli_query($db, $query);
+        $num_rows = mysqli_num_rows($result);
+        if ($num_rows > 0) {
+            $row = mysqli_fetch_assoc($result);
+            $keys = array_keys($row);
+            for ($row_num = 0; $row_num < $num_rows; $row_num++) {
+                $values = array_values($row);
+                $value = htmlspecialchars($values[0]);
+                print "$value  ";
+                $row = mysqli_fetch_assoc($result);
+            }
+        }
+    ?>
+</div>
 </body>
 
