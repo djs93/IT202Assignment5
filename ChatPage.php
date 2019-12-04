@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>IT202 Assignment 5</title>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="script.js"></script>
     <style>
         div{
@@ -16,20 +16,25 @@
             padding-left: 5px;
             padding-right: 5px;
         }
-        #updateText,#listenText{
+        #updateText{
             border-style: solid;
             border-width: 1px;
             border-color: gray;
             background-color: white;
             padding-left: 5px;
             padding-right: 5px;
-            width: 170px;
+            width: 50ch;
+            margin-top: -15px;
+            text-align: center;
+        }
+        #listenText{
             margin-top: -15px;
         }
     </style>
 </head>
 <body>
 <div id="nameBar">
+    Names in database:
     <?php
         $query = "SELECT name FROM IT202A5_Users";
         $result = mysqli_query($db, $query);
@@ -48,9 +53,9 @@
 </div>
 <div id="chatDiv">
     <form id="chatForm" method="post">
-        <label for="name">Name:</label><input type="text" id="name"><br>
-        <label for="password">Password:</label><input type="password" id="password"><br>
-        <label for="text">Message:<br></label><textarea id="text"></textarea>
+        <label for="name">Name:</label><input type="text" id="name" name ='name'><br>
+        <label for="password">Password:</label><input type="password" id="password" name="password"><br>
+        <label for="text">Message:<br></label><textarea id="text" name="text"></textarea>
     </form>
     <p id="updateText">a</p>
 </div>
