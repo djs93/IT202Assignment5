@@ -6,6 +6,11 @@
 
     if(empty($name)){
         echo('Fill in name! ');
+        if(empty($pass)){
+            echo('Fill in password!');
+            exit();
+        }
+        exit();
     }
     if(empty($pass)){
         echo('Fill in password!');
