@@ -61,7 +61,7 @@
 </div>
 <div id="listenDiv">
     <form id="listenForm">
-        <label for="listenName">Name:</label><input type="text" id="listenName">
+        <label for="listenName">Name:</label><input type="text" id="listenName" name="listenName">
     </form>
     <textarea id="listenText" readonly></textarea>
 </div>
